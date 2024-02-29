@@ -1,0 +1,42 @@
+.principal {
+    height: 300px;
+    background-color: cadetblue;
+}
+@media only screen and (max-width:600px){
+    .principal {
+
+        background-color: aqua;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .principal{
+        background-color: rgb(90, 255, 125);
+    }
+}
+
+@media only screen and (max-width:700px){
+    .principal{
+        background-color: rgb(0, 111, 145);
+    }
+}
+@media only screen and (max-width:750px){
+    .principal{
+        background-color: rgb(255, 0, 255);
+    }
+}
+@media only screen and (max-width:800px){
+    .principal{
+        background-color: rgb(255, 230, 0);
+    }
+}
+@media only screen and (max-width:850px){
+    .principal{
+        background-color: rgb(0, 255, 255);
+    }
+}
+@media only screen and (max-width:900px){
+    .principal{
+        background-color: rgb(160, 83, 83);
+    }
+}

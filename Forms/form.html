@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="style2.css"/> 
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form:</h1>
+    <form id="form1" name="form1" action="#" target="_self" method="GET">
+     <fieldset>
+        <legend>first fieldset</legend>
+        <label for="frname">first name</label>
+
+        <input type="text" id="fname" name="fname"size="50" required/><br/>
+        <br>
+        <label for="lname">Last name</label>
+
+        <input type="text" id="1name" name="1name" required/><br/>
+        <br>
+      </fieldset>
+      <br>
+      <fieldset>
+            <legend>Second fieldset</legend>
+            <label for="frname">Adress:</label>
+
+            <input type="text" id="adress" name="address" placeholder="Enter"/><br/>
+            <br>
+            <label for="phone">Phone</label>
+
+            <input type="text" id="phone" name="1name"/><br/>
+            <br>
+            <label for="desc">Description</label><br/>
+            <textarea name="desc" id="desc" cols="50" rows="10"></textarea>    
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Login:</legend>
+        <label for="user">Username:</label> <br />
+        <input type="text" id="user" name="user" placeholder="Enter username" required/><br />
+        
+        <label for="password">Password:</label> <br />
+        <input type="password" id="password" name="password" placeholder="Enter password" required/>
+
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Radio:</legend>
+        <label for="radio1">Radio1: </label>
+        <input type="text" id="radio1" name="radio1"/><br>
+        <label for="radio2">Radio2: </label> 
+        <input type="text" id="radio2" name="radio2"/> <br>
+        <label for="radio3">Radio3: </label> 
+        <input type="text" id="radio3" name="radio3"/><br>
+
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Checkbox: </legend>
+        <label for="check1">CHeck 1:</label>
+        <input type="checkbox" id="check1" name="check1"> <br>
+
+        <label for="check2">Check 2:</label>
+        <input type="checkbox" id="check2" name="check2"> <br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Email: </legend>
+        <label for="email">Email:</label>
+        <input type="email"name="email" id="email" placeholder="Enter your email"> <br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Files:</legend>
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img"> <br>
+
+        <label for="docs">Select docs:</label>
+        <input type="file" id="docs" name="docs" multiple  accept="pdf">
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Numbers:</legend>
+        <label for="age">Age:</label>
+
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="120"> <br>
+
+        <label for="volumn">Range:</label>
+        <input type="range" id="volumn" name="volum" min="18" max="120" value="50" step="25"> <br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Pattern:</legend>
+        <label for="reg"></label> <br />
+        <input type="text" id="reg" name="reg" placeholder="Enter license" pattern="[0-9]{4}{a-zA-Z}{3}" required/> <br>
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" value="#">
+      </fieldset>
+
+      <fieldset>
+        <legend>Select:</legend>
+        <label for="select">Select</label>
+        <select name="select" id="select">
+            <option>Option1</option>
+            <option>Option2</option>
+            <option>Option3</option>
+        </select>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" min="2024-02-15">
+      </fieldset>
+      <fieldset>
+        <legend>Datalist:</legend>
+        <input type="datalist">
+        <datalist id="datalist">
+            <option value="Red"></option>
+            <option value="Green"></option>
+            <option value="Blue"></option>
+            <option value="Yellow"></option>
+            <option value="Cyan"></option>
+            <option value="Magneta"></option>
+        </datalist>
+      </fieldset>
+         <input type="submit" name="submit" value="submit">
+         <input type="reset" name="reset" value="reset">
+
+         <button type="button" onclick="getValues()">Get Values</button>
+
+    </form>
+    <p id="values"></p>
+    <script>
+        function getValues() {
+            let fn = document.getElementById("fname").value;
+            let ln = document.getElementById("lname").value;
+            document.getElementById("values").innerHTML = "First name: " + fn + "<br />"  + "Last name: " + ln;
+        }
+    </script>
+    <script>
+        function checkValues() {
+            const x = document.forms["form"];
+            var text = x.elements["cars"].name + ": " + x.elements["cars"].value;
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

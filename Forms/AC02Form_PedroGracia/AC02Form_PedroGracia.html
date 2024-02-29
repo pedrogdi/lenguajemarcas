@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleinscrip.css"/>
+    <title>Inscripcio</title>
+</head>
+<body>
+    <h1 class="titol">INSCRIPCIO GRAU SUPERIOR</h1>
+    <form id="form1" name="form1" action="#" target="_self" method="GET">
+        <fieldset id="dadesPersonals">
+            <legend><button>Dades Personals</button></legend>
+            <table>
+                <thead>
+                    <tr>
+                        <td> 
+                          <label for="frname">Nom:</label> <br>
+                          <input type="text" id="fname" name="fname"size="30" required/>
+                        <td>
+                          <label for="lname">Cognom:</label> <br>
+                          <input type="text" id="lname" name="lname" required/><br/>
+                        </td>
+                        <td>
+                          <label for="dni">DNI</label> <br>
+                          <input type="text" id="dni" name="dni" pattern="[0-9]{8}[a-zA-Z]"required/><br/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td >
+                            <label for="Localitat de Naixement">Localitat de Naixement</label><br>
+                            <input type="text" id="LocalN" name="LocalN" required=""><br/>
+                        </td>
+                        <td>
+                            <label for="select">Select</label><br>                   
+                            <select name="select" id="select" required="">
+                            <option disabled selected option>--select an option--</option>    
+                            <option>Barcelona</option>
+                            <option>Lleida</option>
+                            <option>Girona</option>
+                            <option>Tarragona</option>
+                            <option>Zaragoza</option>
+                            <option>Teruel</option>
+                            <option>Huesca</option>
+                            <option>Lugo</option>
+                            <option>A Coruña</option>
+                            <option>Guipuzkoa</option>
+                            </select>
+                        </td>
+                        <td colspan="1">
+                            <label for="date">Date:</label> <br>
+                            <input type="date" id="date" name="date" min="1900-01-01" max="01-01-2023" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="Direccio">Direcció</label><br>
+                            <input type="text" id="dire" name="dire" required="">
+                        </td>
+                        <br>
+                        <td colspan="1">
+                            <label for="CodiPostal">Codi Postal</label><br>
+                            <input type="text" id="CP" name="CP" minlength="5" maxlength="5" required="">
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+
+        </fieldset>
+        <br>
+        <fieldset id="formaAcces">
+            <legend><button>Forma d'Acces</button></legend><br>
+            <input type="radio" />
+            <label for="batx">Batxillerat Modalitat: </label>
+            <input type="text" id="batxmod" name="batxmod" required=""/> <br>
+            <br>
+            <input type="radio" />
+            <label for="COU">COU Opció: </label> 
+            <input type="text" id="COU" name="COU" required=""/> <br>
+            <br>
+            <input type="radio" chequed/>
+            <label for="FPmig">FP Grau Mig Cicle: </label>
+            <input type="text" id="FPmig" name="FPmig" required=""/><br>
+            <br>
+            <input type="radio"/>
+            <label for="FPsup">FP Grau Superior Cicle: </label>
+            <input type="text" id="Fpsup" name="FPsup" required=""/><br>
+            <br>
+            <input type="radio" />
+            <label for="Altres">Altres (especificar): </label>
+            <input type="text" id="altres" name="altres" required=""/><br>
+            <br>
+        </fieldset>
+        <br>
+        <fieldset id="documentsAdjunts">
+            <legend><button>Documents Adjunts</button></legend>
+            
+            <input type="checkbox" id="check1" name="check1"> 
+            <label for="fotoDNI">Fotocopia DNI</label><br><br>
+            <input type="checkbox" id="check2" name="check2"> 
+            <label for="Certificat">Certificat Acadèmic Selecciona document: </label>
+            <input type="file" id="img" name="img"></label><br> <br>
+            <input type="checkbox" id="altresDocu" name="altresDocu">
+            <label for="altresDocu">Altres documents (especificar)<input type="text" id="altres" name="altres"/>Selecciona document</label>
+            <input type="file" id="file_multiple" name="file_multiple" accept="image/*" multiple />
+        </fieldset>
+        <br>
+        <input type="submit" value="ENVIAR SOLICITUD" />
+
+    </form>
+
+    
+</body>
+</html>
