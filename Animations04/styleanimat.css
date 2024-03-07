@@ -1,0 +1,13 @@
+header > h2{
+color: rgb(45, 45, 199);
+text-align: center;
+}
+
+.li{
+    display: flex;
+    justify-content: center;
+}
+
+.city{
+    margin: 0 10px;
+}
