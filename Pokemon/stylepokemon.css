@@ -8,27 +8,115 @@ header {
 #poke-container {
     display: grid;
     place-items: center;
+    width: 100%;
     padding: 10px;
     grid-column-gap: 10px 10px 10px;
     row-gap: 10px;
     grid-template-columns: auto auto auto auto; 
 }
+#poke-container {
+    display: grid;
+    grid-template-columns: 100%; 
+  }
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    #poke-container {
+      grid-template-columns: 50% 50%; 
+    }
+  }
+
+  @media screen and (min-width: 801px) {
+    #poke-container {
+      grid-template-columns: 25% 25% 25% 25%; 
+    }
+  }
+
 div #pokemon{
     display:flexbox;
     background-color:darkgrey;
     max-width: 85%;
+    border: 0px solid;
+    border-radius: 10px;
 }
 
 img{
     display: block;
+    justify-items: center;
     background: rgb(255,255,161);
     background: radial-gradient(circle, rgba(255,255,161,1) 31%, rgba(219,218,56,1) 63%);
-    max-width: 80%;
+    max-width: 95%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    border: 0px solid;
+    border-radius: 10px;
 }
 div #pokeContent{
     display: block;
     background: rgb(222,221,221);
     background: radial-gradient(circle, rgba(222,221,221,1) 25%, rgba(147,147,147,1) 98%);
-    max-width: 80%;
+    max-width: 95%;
+    margin-left: 3%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 0px  solid;
+    border-radius: 10px;
 }
 
+h4{
+    font-style: italic;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+
+h4::first-letter{
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: larger;
+}
+
+#pokeNumber::before{
+    font-weight: bold;
+    margin-left: 10%;
+    content: "Code: ";
+}
+
+ul::before{
+    font-weight: bold;
+    content: "Type: ";
+    
+}
+li{
+    display:inline;
+    
+}
+li:not(:last-child)::after {
+    content: ", ";
+}
+#pokeHeight::before{
+    font-weight: bold;
+    display:inline;
+    margin-left: 10%;
+    content:"Height: ";    
+}
+#pokeHeight::after{
+    content:"m"    
+}
+#pokeHeight{
+    display:inline;
+    text-align: left;    
+}
+#pokeWeight{
+    display:inline;
+    float:right;
+}
+#clear{
+    clear: both;
+}
+#pokeWeight::before{
+    font-weight: bold;
+    content:"Weight: ";
+}
+#pokeWeight::after{
+    content:"kg"
+}
